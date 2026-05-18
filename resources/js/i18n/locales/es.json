@@ -1,0 +1,19 @@
+{
+  "welcome": "Bienvenido",
+  "language": "Idioma",
+  "english": "Inglés",
+  "spanish": "Español",
+  "profile": {
+    "settings": "Ajustes de perfil",
+    "information": "Información del perfil",
+    "description": "Actualiza tu nombre y dirección de correo electrónico",
+    "name": "Nombre",
+    "name_placeholder": "Nombre completo",
+    "email": "Correo electrónico",
+    "email_placeholder": "Correo electrónico",
+    "unverified": "Tu dirección de correo electrónico no está verificada.",
+    "resend_verification": "Haz clic aquí para volver a enviar el correo de verificación.",
+    "verification_sent": "Se ha enviado un nuevo enlace de verificación a tu dirección de correo electrónico.",
+    "save": "Guardar"
+  }
+}
