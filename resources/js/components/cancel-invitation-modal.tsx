@@ -10,6 +10,7 @@ import {
     DialogHeader,
     DialogTitle,
 } from '@/components/ui/dialog';
+import { useTranslation } from '@/hooks/use-translation';
 import { destroy as destroyInvitation } from '@/routes/teams/invitations';
 import type { Team, TeamInvitation } from '@/types';
 
@@ -27,6 +28,7 @@ export default function CancelInvitationModal({
     onOpenChange,
 }: Props) {
     const [processing, setProcessing] = useState(false);
+    const { t } = useTranslation();
 
     const cancelInvitation = () => {
         if (!invitation) {
@@ -44,16 +46,19 @@ export default function CancelInvitationModal({
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>Cancel invitation</DialogTitle>
+                    <DialogTitle>{t('teams.modals.cancel.title')}</DialogTitle>
                     <DialogDescription>
-                        Are you sure you want to cancel the invitation for{' '}
-                        <strong>{invitation?.email}</strong>?
+                        {t('teams.modals.cancel.description', {
+                            email: invitation?.email,
+                        })}
                     </DialogDescription>
                 </DialogHeader>
 
                 <DialogFooter className="gap-2">
                     <DialogClose asChild>
-                        <Button variant="secondary">Keep invitation</Button>
+                        <Button variant="secondary">
+                            {t('teams.modals.cancel.keep')}
+                        </Button>
                     </DialogClose>
 
                     <Button
@@ -62,7 +67,7 @@ export default function CancelInvitationModal({
                         disabled={processing}
                         onClick={cancelInvitation}
                     >
-                        Cancel invitation
+                        {t('teams.cancel_invitation')}
                     </Button>
                 </DialogFooter>
             </DialogContent>

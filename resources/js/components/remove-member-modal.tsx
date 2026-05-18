@@ -10,6 +10,7 @@ import {
     DialogHeader,
     DialogTitle,
 } from '@/components/ui/dialog';
+import { useTranslation } from '@/hooks/use-translation';
 import { destroy as destroyMember } from '@/routes/teams/members';
 import type { Team, TeamMember } from '@/types';
 
@@ -27,6 +28,7 @@ export default function RemoveMemberModal({
     onOpenChange,
 }: Props) {
     const [processing, setProcessing] = useState(false);
+    const { t } = useTranslation();
 
     const removeMember = () => {
         if (!member) {
@@ -44,16 +46,19 @@ export default function RemoveMemberModal({
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>Remove team member</DialogTitle>
+                    <DialogTitle>{t('teams.modals.remove.title')}</DialogTitle>
                     <DialogDescription>
-                        Are you sure you want to remove{' '}
-                        <strong>{member?.name}</strong> from this team?
+                        {t('teams.modals.remove.description', {
+                            name: member?.name,
+                        })}
                     </DialogDescription>
                 </DialogHeader>
 
                 <DialogFooter className="gap-2">
                     <DialogClose asChild>
-                        <Button variant="secondary">Cancel</Button>
+                        <Button variant="secondary">
+                            {t('common.cancel')}
+                        </Button>
                     </DialogClose>
 
                     <Button
@@ -62,7 +67,7 @@ export default function RemoveMemberModal({
                         disabled={processing}
                         onClick={removeMember}
                     >
-                        Remove member
+                        {t('teams.remove_member')}
                     </Button>
                 </DialogFooter>
             </DialogContent>

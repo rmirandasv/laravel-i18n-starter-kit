@@ -20,6 +20,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select';
+import { useTranslation } from '@/hooks/use-translation';
 import { store as storeInvitation } from '@/routes/teams/invitations';
 import type { RoleOption, Team } from '@/types';
 
@@ -37,6 +38,7 @@ export default function InviteMemberModal({
     onOpenChange,
 }: Props) {
     const [inviteRole, setInviteRole] = useState<RoleOption['value']>('member');
+    const { t } = useTranslation();
 
     const handleOpenChange = (nextOpen: boolean) => {
         onOpenChange(nextOpen);
@@ -58,28 +60,36 @@ export default function InviteMemberModal({
                     {({ errors, processing }) => (
                         <>
                             <DialogHeader>
-                                <DialogTitle>Invite a team member</DialogTitle>
+                                <DialogTitle>
+                                    {t('teams.modals.invite.title')}
+                                </DialogTitle>
                                 <DialogDescription>
-                                    Send an invitation to join this team.
+                                    {t('teams.modals.invite.description')}
                                 </DialogDescription>
                             </DialogHeader>
 
                             <div className="grid gap-4">
                                 <div className="grid gap-2">
-                                    <Label htmlFor="email">Email address</Label>
+                                    <Label htmlFor="email">
+                                        {t('profile.email')}
+                                    </Label>
                                     <Input
                                         id="email"
                                         name="email"
                                         type="email"
                                         data-test="invite-email"
-                                        placeholder="colleague@example.com"
+                                        placeholder={t(
+                                            'teams.modals.invite.email_placeholder',
+                                        )}
                                         required
                                     />
                                     <InputError message={errors.email} />
                                 </div>
 
                                 <div className="grid gap-2">
-                                    <Label htmlFor="role">Role</Label>
+                                    <Label htmlFor="role">
+                                        {t('teams.modals.invite.role')}
+                                    </Label>
                                     <Select
                                         name="role"
                                         data-test="invite-role"
@@ -91,7 +101,11 @@ export default function InviteMemberModal({
                                         }
                                     >
                                         <SelectTrigger className="w-full">
-                                            <SelectValue placeholder="Select a role" />
+                                            <SelectValue
+                                                placeholder={t(
+                                                    'teams.modals.invite.role_placeholder',
+                                                )}
+                                            />
                                         </SelectTrigger>
                                         <SelectContent>
                                             {availableRoles.map((role) => (
@@ -110,7 +124,9 @@ export default function InviteMemberModal({
 
                             <DialogFooter className="gap-2">
                                 <DialogClose asChild>
-                                    <Button variant="secondary">Cancel</Button>
+                                    <Button variant="secondary">
+                                        {t('common.cancel')}
+                                    </Button>
                                 </DialogClose>
 
                                 <Button
@@ -118,7 +134,7 @@ export default function InviteMemberModal({
                                     data-test="invite-submit"
                                     disabled={processing}
                                 >
-                                    Send invitation
+                                    {t('teams.modals.invite.button')}
                                 </Button>
                             </DialogFooter>
                         </>

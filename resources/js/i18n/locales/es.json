@@ -1,19 +1,223 @@
 {
-  "welcome": "Bienvenido",
-  "language": "Idioma",
-  "english": "Inglés",
-  "spanish": "Español",
-  "profile": {
-    "settings": "Ajustes de perfil",
-    "information": "Información del perfil",
-    "description": "Actualiza tu nombre y dirección de correo electrónico",
-    "name": "Nombre",
-    "name_placeholder": "Nombre completo",
-    "email": "Correo electrónico",
-    "email_placeholder": "Correo electrónico",
-    "unverified": "Tu dirección de correo electrónico no está verificada.",
-    "resend_verification": "Haz clic aquí para volver a enviar el correo de verificación.",
-    "verification_sent": "Se ha enviado un nuevo enlace de verificación a tu dirección de correo electrónico.",
-    "save": "Guardar"
-  }
+    "welcome": "Bienvenido",
+    "language": "Idioma",
+    "english": "Inglés",
+    "spanish": "Español",
+    "common": {
+        "save": "Guardar",
+        "cancel": "Cancelar",
+        "warning": "Advertencia",
+        "warning_text": "Por favor, procede con precaución, esto no se puede deshacer.",
+        "password": "Contraseña",
+        "confirm": "Confirmar",
+        "back": "Volver",
+        "close": "Cerrar",
+        "continue": "Continuar"
+    },
+    "profile": {
+        "settings": "Ajustes de perfil",
+        "information": "Información del perfil",
+        "description": "Actualiza tu nombre y dirección de correo electrónico",
+        "name": "Nombre",
+        "name_placeholder": "Nombre completo",
+        "email": "Correo electrónico",
+        "email_placeholder": "Correo electrónico",
+        "unverified": "Tu dirección de correo electrónico no está verificada.",
+        "resend_verification": "Haz clic aquí para volver a enviar el correo de verificación.",
+        "verification_sent": "Se ha enviado un nuevo enlace de verificación a tu dirección de correo electrónico.",
+        "save": "Guardar"
+    },
+    "delete_account": {
+        "title": "Eliminar cuenta",
+        "description": "Eliminar tu cuenta y todos sus recursos",
+        "warning": "Advertencia",
+        "warning_text": "Por favor, procede con precaución, esto no se puede deshacer.",
+        "confirm_title": "¿Estás seguro de que quieres eliminar tu cuenta?",
+        "confirm_description": "Una vez que tu cuenta sea eliminada, todos sus recursos y datos también se eliminarán de forma permanente. Por favor, introduce tu contraseña para confirmar que deseas eliminar tu cuenta permanentemente.",
+        "password": "Contraseña",
+        "cancel": "Cancelar"
+    },
+    "settings": {
+        "title": "Ajustes",
+        "description": "Gestiona tu perfil y los ajustes de tu cuenta",
+        "nav": {
+            "profile": "Perfil",
+            "security": "Seguridad",
+            "teams": "Equipos",
+            "appearance": "Apariencia"
+        }
+    },
+    "teams": {
+        "title": "Equipos",
+        "description": "Gestiona tus equipos y membresías",
+        "new_team": "Nuevo equipo",
+        "personal": "Personal",
+        "view_team": "Ver equipo",
+        "edit_team": "Editar equipo",
+        "no_teams": "Aún no perteneces a ningún equipo.",
+        "edit_title": "Editar {{name}}",
+        "view_title": "Ver {{name}}",
+        "settings": "Ajustes del equipo",
+        "settings_description": "Actualiza el nombre y los ajustes de tu equipo",
+        "name": "Nombre del equipo",
+        "members": "Miembros del equipo",
+        "members_description": "Gestiona quién pertenece a este equipo",
+        "invite_member": "Invitar miembro",
+        "remove_member": "Eliminar miembro",
+        "pending_invitations": "Invitaciones pendientes",
+        "pending_description": "Invitaciones que aún no han sido aceptadas",
+        "cancel_invitation": "Cancelar intención",
+        "delete_team": "Eliminar equipo",
+        "delete_description": "Eliminar permanentemente tu equipo",
+        "modals": {
+            "create": {
+                "title": "Crear un nuevo equipo",
+                "description": "Crea un nuevo equipo para colaborar con otros.",
+                "placeholder": "Mi equipo",
+                "button": "Crear equipo"
+            },
+            "invite": {
+                "title": "Invitar a un miembro del equipo",
+                "description": "Envía una invitación para unirse a este equipo.",
+                "email_placeholder": "colega@ejemplo.com",
+                "role": "Rol",
+                "role_placeholder": "Selecciona un rol",
+                "button": "Enviar invitación"
+            },
+            "remove": {
+                "title": "Eliminar miembro del equipo",
+                "description": "¿Estás seguro de que quieres eliminar a {{name}} de este equipo?"
+            },
+            "cancel": {
+                "title": "Cancelar invitación",
+                "description": "¿Estás seguro de que quieres cancelar la invitación para {{email}}?",
+                "keep": "Mantener invitación"
+            },
+            "delete": {
+                "title": "¿Estás seguro?",
+                "description": "Esta acción no se puede deshacer. Esto eliminará permanentemente al equipo \"{{name}}\".",
+                "confirmation_label": "Escribe \"{{name}}\" para confirmar",
+                "placeholder": "Introduce el nombre del equipo"
+            }
+        }
+    },
+    "appearance": {
+        "title": "Ajustes de apariencia",
+        "description": "Actualiza los ajustes de apariencia de tu cuenta",
+        "light": "Claro",
+        "dark": "Oscuro",
+        "system": "Sistema"
+    },
+    "security": {
+        "title": "Ajustes de seguridad",
+        "password": {
+            "title": "Actualizar contraseña",
+            "description": "Asegúrate de que tu cuenta esté utilizando una contraseña larga y aleatoria para mantenerla segura",
+            "current": "Contraseña actual",
+            "new": "Nueva contraseña",
+            "confirm": "Confirmar contraseña",
+            "save": "Guardar contraseña"
+        },
+        "two_factor": {
+            "title": "Autenticación de dos factores",
+            "description": "Gestiona tus ajustes de autenticación de dos factores",
+            "enabled_text": "Se te pedirá un pin seguro y aleatorio durante el inicio de sesión, que podrás obtener de la aplicación compatible con TOTP de tu teléfono.",
+            "disabled_text": "Cuando habilites la autenticación de dos factores, se te pedirá un pin seguro durante el inicio de sesión. Este pin se puede obtener desde una aplicación compatible con TOTP en tu teléfono.",
+            "enable": "Habilitar 2FA",
+            "disable": "Deshabilitar 2FA",
+            "continue_setup": "Continuar configuración",
+            "manual_code": "o introduce el código manualmente",
+            "recovery_codes": {
+                "title": "Códigos de recuperación 2FA",
+                "description": "Los códigos de recuperación te permiten recuperar el acceso si pierdes tu dispositivo 2FA. Guárdalos en un gestor de contraseñas seguro.",
+                "view": "Ver códigos de recuperación",
+                "hide": "Ocultar códigos de recuperación",
+                "regenerate": "Regenerate códigos",
+                "warning": "Cada código de recuperación se puede usar una vez para acceder a tu cuenta y se eliminará después de su uso. Si necesitas más, haz clic en Regenerar códigos arriba."
+            },
+            "modal": {
+                "enabled_title": "Autenticación de dos factores habilitada",
+                "enabled_description": "La autenticación de dos factores ahora está habilitada. Escanea el código QR o introduce la clave de configuración en tu aplicación de autenticación.",
+                "verify_title": "Verificar código de autenticación",
+                "verify_description": "Introduce el código de 6 dígitos de tu aplicación de autenticación",
+                "enable_title": "Habilitar autenticación de dos factores",
+                "enable_description": "Para terminar de habilitar la autenticación de dos factores, escanea el código QR o introduce la clave de configuración en tu aplicación de autenticación"
+            }
+        }
+    },
+    "nav": {
+        "platform": "Plataforma",
+        "dashboard": "Panel de control",
+        "repository": "Repositorio",
+        "documentation": "Documentación",
+        "select_team": "Seleccionar equipo",
+        "teams": "Equipos",
+        "new_team": "Nuevo equipo",
+        "user_menu": {
+            "settings": "Ajustes",
+            "log_out": "Cerrar sesión"
+        }
+    },
+    "dashboard": {
+        "title": "Panel de control"
+    },
+    "auth": {
+        "confirm_password": {
+            "title": "Confirmar contraseña",
+            "layout_title": "Confirma tu contraseña",
+            "layout_description": "Esta es un área segura de la aplicación. Por favor, confirma tu contraseña antes de continuar.",
+            "button": "Confirmar contraseña"
+        },
+        "forgot_password": {
+            "title": "Contraseña olvidada",
+            "layout_description": "Introduce tu correo electrónico para recibir un enlace de restablecimiento de contraseña",
+            "button": "Enviar enlace de restablecimiento",
+            "or_return_to": "O volver a",
+            "link_login": "iniciar sesión"
+        },
+        "login": {
+            "title": "Iniciar sesión",
+            "layout_title": "Inicia sesión en tu cuenta",
+            "layout_description": "Introduce tu correo y contraseña a continuación para iniciar sesión",
+            "forgot_password": "¿Olvidaste tu contraseña?",
+            "remember_me": "Recordarme",
+            "dont_have_account": "¿No tienes una cuenta?",
+            "sign_up": "Regístrate"
+        },
+        "register": {
+            "title": "Registro",
+            "layout_title": "Crear una cuenta",
+            "layout_description": "Introduce tus datos a continuación para crear tu cuenta",
+            "button": "Crear cuenta",
+            "already_have_account": "¿Ya tienes una cuenta?",
+            "link_login": "Inicia sesión"
+        },
+        "reset_password": {
+            "title": "Restablecer contraseña",
+            "layout_description": "Por favor, introduce tu nueva contraseña a continuación",
+            "button": "Restablecer contraseña"
+        },
+        "two_factor_challenge": {
+            "title": "Autenticación de dos factores",
+            "recovery": {
+                "title": "Código de recuperación",
+                "description": "Por favor, confirma el acceso a tu cuenta introduciendo uno de tus códigos de recuperación de emergencia.",
+                "toggle": "iniciar sesión con un código de autenticación",
+                "placeholder": "Introduce el código de recuperación"
+            },
+            "auth_code": {
+                "title": "Código de autenticación",
+                "description": "Introduce el código de autenticación proporcionado por tu aplicación de autenticación.",
+                "toggle": "iniciar sesión con un código de recuperación"
+            },
+            "or_can": "o puedes"
+        },
+        "verify_email": {
+            "title": "Verificación de correo",
+            "layout_title": "Verifica tu correo",
+            "layout_description": "Por favor, verifica tu dirección de correo electrónico haciendo clic en el enlace que acabamos de enviarte por correo.",
+            "link_sent_success": "Se ha enviado un nuevo enlace de verificación a la dirección de correo electrónico que proporcionaste durante el registro.",
+            "button_resend": "Reenviar correo de verificación"
+        }
+    }
 }
