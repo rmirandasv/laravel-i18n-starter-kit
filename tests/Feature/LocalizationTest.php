@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\App;
-use function Pest\Laravel\get;
-use function Pest\Laravel\withCookie;
 
 it('sets the locale based on the i18nextLng cookie', function (string $locale) {
     $this->withUnencryptedCookie('i18nextLng', $locale)
@@ -29,7 +27,7 @@ it('sanitizes region codes in the cookie', function () {
 
 it('ignores unsupported locales', function () {
     $defaultLocale = config('app.locale');
-    
+
     $this->withUnencryptedCookie('i18nextLng', 'fr')
         ->get('/')
         ->assertStatus(200);
