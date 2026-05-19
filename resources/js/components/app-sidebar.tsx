@@ -15,8 +15,8 @@ import {
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
 import { useTranslation } from '@/hooks/use-translation';
-import type { NavItem } from '@/types';
 import { dashboard } from '@/routes';
+import type { NavItem } from '@/types';
 
 export function AppSidebar() {
     const page = usePage();
